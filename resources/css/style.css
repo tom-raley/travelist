@@ -1,0 +1,60 @@
+html, body {
+    font-size: 16px;
+    font-family: Ubunut, sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url(../images/road-220058_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.input {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 0.6rem;
+    border-color: #000000
+    
+}
+
+.button {
+    margin-top: 1rem;
+    font-family: Ubuntu, sans-serif;
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+}
+
+.button:hover {
+    cursor: pointer;
+}
