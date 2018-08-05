@@ -28,11 +28,54 @@
     <header>
         <h1>Travelist</h1>
         <h2>Where Do You Want to Go On Your Trip?</h2>
-        <form action="">
+        <form>
             <input type="text" class="input" placeholder="Enter landmark, POI, or address">
-            <input type="button" class="button" value="Add to Itinerary">
+            <span onclick="newElement()" class="addBtn">Add</span>
         </form>
     </header>
-        <script src="" async defer></script>
+    <ul class="myUL">
+    </ul>
+
+<script>
+    const myNodelist = document.querySelectorAll("LI");
+    for (i = 0; i < myNodelist.length; i++) {
+        const span = document.createElement("SPAN");
+        const txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist[i].appendChild(span);
+    }
+
+    
+
+    function newElement() {
+        const li = document.createElement("li");
+        const inputValue = document.querySelector(".input").value;
+        const t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === "") {
+            alert("You must write something!");
+        } else {
+            document.querySelector(".myUL").appendChild(li);
+        }
+        document.querySelectorAll(".input").value = "";
+        const span = document.createElement("SPAN");
+        const txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        const close = document.querySelectorAll(".close");
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                    const div = this.parentElement;
+                    div.style.display = "none";
+            }
+        }
+        
+        document.querySelector("form").reset();
+    }
+</script>
+
     </body>
 </html>
