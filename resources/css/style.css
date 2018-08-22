@@ -1,3 +1,5 @@
+/*Univeral Styles*/
+
 html, body {
     font-size: 16px;
     font-family: Ubunut, sans-serif;
@@ -22,6 +24,8 @@ body {
     background-size: cover;
 }
 
+
+/*Animation Styles*/
 @keyframes slideInFromTop {
     0% {
         transform: translateY(-100%);
@@ -31,18 +35,13 @@ body {
     }
 }
 
+
+/*Header Styles*/
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 6rem;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
 }
 
 h1 {
@@ -60,7 +59,12 @@ h2 {
     animation-timing-function: cubic-bezier(0, 0, 0, 1.15);
 }
 
+/*Form Styles*/
 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
     animation: 1ms ease-out 0s 1 slideInFromTop;
 }
 
@@ -69,6 +73,7 @@ form {
     height: 3rem;
     border-radius: 0.8rem;
     border-color: #000000;
+    outline: none;
 }
 
 .addBtn {
@@ -87,6 +92,7 @@ form {
     color: #f9f9f9;
 }
 
+/*List Styles*/
 ul {
     margin: 0;
     padding: 0;
@@ -130,4 +136,20 @@ ul li:hover {
 .close:hover {
     background-color: #f44336;
     color: white;
+}
+
+/*Mobile Styles*/
+@media only screen and (max-width: 540px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .input {
+    width: 15rem;
+    height: 2rem;
+    }
 }

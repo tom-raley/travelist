@@ -20,8 +20,6 @@
             crossorigin="anonymous"></script>
         <link rel="stylesheet" href="resources/css/reset.css">
         <link rel="stylesheet" href="resources/css/style.css">
-       <!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd7zvgy3qGeYdipOx8u2bYKyYuBU8YsH4&libraries=places"></script>
--->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -48,8 +46,6 @@
         span.appendChild(txt);
         myNodelist[i].appendChild(span);
     }
-
-    
 
     function newElement() {
         const li = document.createElement("li");
@@ -80,15 +76,21 @@
         
     }
 
-    function searchReturn () {
-        const button = document.querySelector(".addBtn");
-        const input = document.querySelector(".input");
-        input.addEventListener("keypress", function(event) {
+    $("form").keypress(function (e) {
+        //Enter key
+        if (e.which == 13) {
+            return false;
+        }
+    });
+
+    /* function searchReturn () {
+        const input = document.getElementByTagName("input");
+        input.addEventListener("keyup", function(event) {
             event.preventDefault();
             if (event.keyCode === 13)
-            button.click();
-        });
-    }
+            document.getElementByClass("addBtn").click();
+          });
+    } */
 
 
 
